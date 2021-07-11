@@ -1,0 +1,318 @@
+[global/wm]
+margin-top = 
+margin-bottom = 
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+format-foreground = #FF0000
+format-background = #00FF00
+format-underline =
+format-overline =
+format-spacing =
+format-padding =
+format-margin =
+format-offset =
+
+[colors]
+; Nord theme ============
+background = #282c34
+foreground = #fff
+alert = #bd2c40
+volume-min = #a3be8c
+volume-med = #ebcb8b
+volume-max = #bf616a
+
+[bar/example]
+
+monitor = LVDS1
+monitor-strict = false
+override-redirect = false
+bottom = false
+fixed-center = true
+
+width = 100%
+height = 22
+offset-x = 
+offset-y = 
+padding-left = 
+padding-right = 
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+radius = 0
+line-size = 2
+line-color = #000000
+
+border-size = 0
+border-color = #52b788
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "UbuntuMono Nerd Font:size=10;2"
+font-1 = "UbuntuMono Nerd Font:size=18;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-4 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-5 = "Monofur:size=15;3" 
+
+modules-left = i3 
+modules-center = date
+modules-right = filesystem begin cpu2 begin memory2 begin battery begin backlight begin pulseaudio begin
+
+separator =
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 5
+tray-scale = 1
+
+enable-ipc = true
+
+click-left =
+click-middle =
+click-right =
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+double-click-left =
+double-click-middle =
+double-click-right =
+
+cursor-click =
+cursor-scroll =
+
+[module/i3]
+type = internal/bspwm
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+pin-workspaces = true
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
+ws-icon-default = " "
+
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-background= ${colors.background}
+label-focused-padding = 1
+label-focused-foreground = #bf676a 
+
+
+label-occupied = %icon%
+label-occupied-padding = 1
+label-occupied-foreground = #aa6790e0
+
+
+label-urgent = %icon%
+label-urgent-padding = 1
+
+label-empty = %icon%
+label-empty-foreground = #dee2ec
+label-empty-padding = 1
+label-empty-background = ${colors.background}
+    #label-monocle = "  "
+    #label-monocle-foreground = ${colors.foreground}
+    #label-tiled = "  "
+    #label-tiled-foreground = ${colors.foreground}
+    #label-fullscreen = "  "
+    #label-fullscreen-foreground = ${colors.foreground}
+    #label-floating = "  "
+    #label-floating-foreground = ${colors.foreground}
+    #label-pseudotiled = "  "
+    #label-pseudotiled-foreground = ${colors.foreground}
+    #label-locked = "  "
+   # label-locked-foreground = ${colors.foreground}
+    #label-sticky = "  "
+   # label-sticky-foreground = ${colors.foreground}
+   # label-private =  "     "
+   # label-private-foreground = ${colors.foreground}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+[module/begin]
+; grey to Blue
+type = custom/text
+content = "%{T2}  %{T-}"
+content-font = 2
+content-foreground = #495057
+content-background = #aa
+
+[module/backlight]
+type = internal/xbacklight
+format-background = #282c34
+format-foreground = #fefefe
+output = LVDS1
+enable-scroll = false
+
+format = <ramp> <label>
+label = %percentage%
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+[module/battery]
+;https://github.com/jaagr/polybar/wiki/Module:-battery
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 100
+
+format-charging = <animation-charging> <label-charging>
+label-charging =  %percentage%%
+format-charging-foreground = ${colors.foreground}
+format-charging-background = ${colors.background}
+format-charging-underline = #282c34
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging =  %percentage%%
+format-discharging-underline = #282c34
+format-discharging-foreground = ${colors.foreground}
+format-discharging-background = ${colors.background}
+
+format-full-prefix = " "
+format-full-prefix-foreground = #a3c725
+format-full-underline = #282c34
+format-full-foreground = ${colors.foreground}
+format-full-background = ${colors.background}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = #c7ae25
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = #a3c725
+animation-charging-framerate = 750
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+format-connected = [<ramp-signal> <label-connected>]
+label-connected =   %essid% 
+format-connected-foreground = #D08770
+format-connected-background = #282c34
+format-connected-underline = #282c34
+format-connected-padding = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+format-mounted-padding = 
+label-mounted = %{F#ebcb8b}%{F#ebcb8b}%mountpoint%%{F#ebcb8b}: %percentage_used%%%{F#ebcb8b}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+format-mounted-foreground = #303541
+format-mounted-prefix-foreground = #303541
+format-mounted-background = #282c34
+format-mounted-underline = #282c34
+
+[module/powermenu]
+type = custom/text
+content = "[ ]"
+content-font = 1
+content-foreground = #aa
+content-background = #282c34
+click-left = /home/koteczek/.config/i3/scripts/shutdown_menu -p rofi -c
+
+
+[module/cpu2]
+type = internal/cpu
+interval = 1
+format-foreground = #88C0D0
+format-background = #282c34
+format-prefix = "  "
+format-prefix-foreground = #88C0D0
+format-underline = #282c34
+label-font = 1
+format = <label>
+label =  %percentage:3%%%{F#88C0D0}
+
+[module/date]
+type = internal/date
+interval = 5
+date = 
+date-alt = " %a %d-%m-%Y"
+time =%l:%M%p
+time-alt = %l:%M%p
+format-prefix =  ""
+format-prefix-foreground = #f2c6de
+format-foreground = #ffffff
+format-background = #282c34
+label = "%date% %time%"
+format-underline = 
+
+[module/memory2]
+type = internal/memory
+interval = 1
+label = %mb_used%%{F#A3BE8C}
+
+format = <label>
+format-prefix = "  "
+format-prefix-foreground = #A3BE8C
+format-foreground = #A3BE8C
+format-background = #282c34
+format-underline = #282c34
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+label-volume = "  %percentage%%"
+label-muted = "  Mute "
+click-left = exec pavucontrol
+format-volume-underline = #282c34
+format-volume-foreground = #f08080
+format-volume-background = #282c34
+format-muted-foreground = ${colors.color0}
+format-muted-background = ${colors.color4}
+
+[module/xwindow]
+type = internal/xwindow
+label =%title%
+label-maxlen = 
+format-margin = 3
+format-prefix =
+format-prefix-underline = #fff
+format-underline =
+format-foreground = 
+format-background = ${colors.background}
+
