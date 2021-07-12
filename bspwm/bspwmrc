@@ -18,6 +18,7 @@ nm-applet &
 blueberry-tray &
 exec lxpolkit &
 exec setxkbmap pl &
+exec dbus-update-activation-environment --all &
 #cbatticon
 #exec xrandr -s 1600x900
 #### MONITORS ####
