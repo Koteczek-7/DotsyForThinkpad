@@ -182,6 +182,7 @@ ramp-4 = 🌑
 type = internal/battery
 battery = BAT0
 adapter = AC0
+time-format = %H:%M
 full-at = 100
 
 format-charging = <animation-charging> <label-charging>
@@ -191,7 +192,7 @@ format-charging-background = ${colors.background}
 format-charging-underline = #282c34
 
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging =  %percentage%%
+label-discharging =  %percentage%% (%time%)
 format-discharging-underline = #282c34
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
