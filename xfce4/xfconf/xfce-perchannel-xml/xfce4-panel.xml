@@ -11,7 +11,7 @@
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="21"/>
-      <property name="size" type="uint" value="31"/>
+      <property name="size" type="uint" value="27"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
         <value type="int" value="2"/>
@@ -33,31 +33,33 @@
       </property>
       <property name="enter-opacity" type="uint" value="100"/>
       <property name="leave-opacity" type="uint" value="100"/>
+      <property name="nrows" type="uint" value="1"/>
     </property>
     <property name="panel-2" type="empty">
       <property name="autohide-behavior" type="uint" value="1"/>
-      <property name="position" type="string" value="p=10;x=0;y=0"/>
-      <property name="length" type="uint" value="1"/>
+      <property name="position" type="string" value="p=8;x=31;y=463"/>
+      <property name="length" type="uint" value="97"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="48"/>
+      <property name="size" type="uint" value="45"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="15"/>
-        <value type="int" value="16"/>
-        <value type="int" value="17"/>
-        <value type="int" value="28"/>
-        <value type="int" value="11"/>
         <value type="int" value="24"/>
-        <value type="int" value="30"/>
+        <value type="int" value="17"/>
         <value type="int" value="18"/>
-        <value type="int" value="22"/>
         <value type="int" value="21"/>
         <value type="int" value="19"/>
-        <value type="int" value="33"/>
         <value type="int" value="31"/>
-        <value type="int" value="32"/>
+        <value type="int" value="33"/>
+        <value type="int" value="16"/>
+        <value type="int" value="28"/>
+        <value type="int" value="22"/>
+        <value type="int" value="11"/>
         <value type="int" value="20"/>
+        <value type="int" value="30"/>
       </property>
       <property name="enter-opacity" type="uint" value="100"/>
+      <property name="mode" type="uint" value="2"/>
+      <property name="nrows" type="uint" value="1"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -70,6 +72,9 @@
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="uint" value="1"/>
       <property name="show-labels" type="bool" value="false"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="sort-order" type="uint" value="0"/>
+      <property name="show-wireframes" type="bool" value="false"/>
     </property>
     <property name="plugin-3" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
@@ -95,7 +100,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance26424;firefox.instance3513;firefox.instance7774;firefox.instance789;spotify"/>
+      <property name="mpris-players" type="string" value="firefox.instance11044;firefox.instance17576;firefox.instance26424;firefox.instance3513;firefox.instance64531;firefox.instance7774;firefox.instance789;firefox.instance8700;spotify"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
@@ -117,20 +122,7 @@
         <value type="string" value="16260248372.desktop"/>
       </property>
     </property>
-    <property name="plugin-19" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="16260248373.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-20" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="16260248374.desktop"/>
-      </property>
-    </property>
     <property name="plugin-21" type="string" value="separator"/>
-    <property name="plugin-22" type="string" value="directorymenu">
-      <property name="base-directory" type="string" value="/home/koteczek"/>
-    </property>
     <property name="plugin-7" type="string" value="separator"/>
     <property name="plugin-23" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -160,10 +152,20 @@
         <value type="string" value="16264566904.desktop"/>
       </property>
     </property>
-    <property name="plugin-32" type="string" value="separator"/>
     <property name="plugin-33" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="16264569925.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-19" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16265524251.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-20" type="string" value="separator"/>
+    <property name="plugin-22" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="16265532432.desktop"/>
       </property>
     </property>
   </property>
